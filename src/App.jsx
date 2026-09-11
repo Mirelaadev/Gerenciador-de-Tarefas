@@ -47,7 +47,7 @@ function onAddTaskSubmit (title, description) {
     title,
     description,
     isCompleted: false
-  }
+  };
   setTasks([...tasks, newTask])
  
 
@@ -59,7 +59,7 @@ function onAddTaskSubmit (title, description) {
         <h1 className="text-3xl text-slate-100 font-bold text-center">
           Gerenciador de tarefas
           </h1>
-          <AddTasks tasks={onAddTaskSubmit}/> 
+          <AddTasks onAddTaskSubmit={onAddTaskSubmit}/> 
           <Tasks tasks={tasks}
            onTaskClick={onTaskClick}
            onDeleteTasksClick={onDeleteTasksClick}/>
